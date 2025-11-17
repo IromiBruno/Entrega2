@@ -3,43 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario</title>
+    <title>Calendario de carreras 2025</title>
 
-    <link rel="stylesheet" href="../css/main.css">
-
-    <!-- Bootstrap solo para menú y grilla -->
+    <!-- Bootstrap (solo para el menú y la grilla) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- mi hoja de estilos -->
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
 
 <header class="header-principal">
-  <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="../index.html">Carburando F1</a>
+  <!-- navbar oscura para que se vean mejor los links -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #433535;">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">Carburando F1</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li><a class="nav-link" href="../index.html">Home</a></li>
-        <li><a class="nav-link" href="parrilla.html">Parrilla de temporada</a></li>
-        <li><a class="nav-link" href="calendario.html">Calendario de carreras</a></li>
-      </ul>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="parrilla.html">Parrilla de temporada</a></li>
+          <li><a class="nav-link active" href="calendario.html">Calendario de carreras</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
 
-<main class="principal">
+<!-- contenido principal -->
+<main class="principal container">
 
   <h1 class="titulo-principal">Calendario de carreras 2025</h1>
 
-  <img src="../media/circuitos-f1.Coderhouse.jpg" class="circuitos" alt="Mapa de circuitos">
+  <!-- imagen de los circuitos -->
+  <img src="../media/circuitos-f1.Coderhouse.jpg" class="circuitos" alt="Mapa de circuitos de la F1">
 
+  <!-- lista de carreras -->
   <div class="row calendario-lista">
-
     <div class="col-md-4">
       <div class="caja-carrera">
         <h3 class="subtitulo">Australian GP</h3>
@@ -63,27 +68,37 @@
         <small>Ganador: Max Verstappen</small>
       </div>
     </div>
-
   </div>
-
 </main>
 
-<section class="mapa-seccion">
+<!-- mapa del circuito -->
+<section class="mapa-seccion container">
   <h2 class="subtitulo">Ubicación del próximo circuito</h2>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2051.763188564397!2d-97.64321589286952!3d30.133095485324688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b03ad152eaf9%3A0x8ae827dd1ff5e0ed!2sCircuito%20de%20las%20Am%C3%A9ricas!5e0!3m2!1ses!2sar!4v1762302611345!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2051.763188564397!2d-97.64321589286952!3d30.133095485324688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b03ad152eaf9%3A0x8ae827dd1ff5e0ed!2sCircuito%20de%20las%20Am%C3%A9ricas!5e0!3m2!1ses!2sar!4v1762302611345!5m2!1ses!2sar" 
+    width="600" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
 </section>
 
-<form class="formulario">
-  <legend>¿Cuál crees que es el mejor circuito?</legend>
+<!-- formulario de opinión -->
+<section class="formulario container">
+  <legend>¿Cuál creés que es el mejor circuito?</legend>
 
-  <label>Nombre del circuito</label>
-  <input type="text">
+  <form class="form-circuito">
+    <label for="nombreCircuito">Nombre del circuito</label>
+    <input type="text" id="nombreCircuito" name="nombreCircuito" placeholder="Ej: Monza">
 
-  <label>Correo electrónico</label>
-  <input type="email">
+    <label for="correoUsuario">Correo electrónico</label>
+    <input type="email" id="correoUsuario" name="correoUsuario" placeholder="Ej: nombre@correo.com">
 
-  <button type="submit">Enviar</button>
-</form>
+    <button type="submit" class="boton-enviar">Enviar</button>
+  </form>
+</section>
 
 <footer class="footer">
   <small>2025 · Carburando F1 · Todos los derechos reservados.</small>

@@ -1,5 +1,59 @@
-/*index*/
-                           /*.carburando imagen principal, la puse mas grande*/
+/* ---------- NAV BAR ---------- */
+
+.header-principal {
+  background-color: #433535;
+  padding: 10px;
+}
+
+/* links blancos para que se vean con el fondo oscuro */
+.nav-link,
+.navbar-brand {
+  color: white !important;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: #c50000 !important; /* rojo ferrari */
+}
+
+/* ---------- AJUSTES GENERALES ---------- */
+
+/* centrado de las secciones principales */
+.principal {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* centrado general */
+}
+
+/* en desktop queda más equilibrado */
+@media (min-width: 992px) {
+  .principal {
+    padding: 40px 60px;
+  }
+}
+
+/* ---------- TITULOS ---------- */
+h1,
+h2 {
+  color: #c50000;
+}
+
+.titulo-principal {
+  margin-bottom: 20px;
+}
+
+.subtitulo {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* ---------- INDEX ---------- */
+
 .carburando {
   width: 60%;
   max-width: 500px;
@@ -7,7 +61,7 @@
   display: block;
   margin: auto;
 }
-                            /*ahora responsive, mas pro*/
+
 .videoautos {
   width: 100%;
   max-width: 600px;
@@ -15,81 +69,6 @@
   display: block;
   margin: auto;
   border-radius: 8px;
-}
-
-.autorojo {
-  width: 600px;
-  height: auto;
-}
-
-.autonegro {
-  width: 575px;
-  height: auto;
-}
-
-/*parrilla*/
-.pilotos {
-  width: 400px;
-  height: auto;
-  display: block;
-  margin: auto;
-}
-
-.card-title {
-  color: #c50000; /* rojo Ferrari */
-  font-weight: 600;
-}
-
-/*calendario*/
-
-.circuitos {
-  width: 250px;
-  height: auto;
-  display: block;
-  margin: auto;
-}
-
-/*nav bar*/
-.nav-link:hover {
-  color: #c50000 !important;
-}
-
-.navbar-brand {
-  font-weight: 600;
-}
-
-/*titulod*/
-h1, h2 {
-  color: #c50000;
-}
-
-/*DIVISION*/
-
-/* ---------- INDEX ---------- */
-.header-principal {
-  background-color: #433535;
-  padding: 10px;
-}
-
-.nav-link, .navbar-brand {
-  color: white;
-  text-decoration: none;
-}
-
-.principal {
-  text-align: center;
-  padding: 20px;
-}
-
-.titulo-principal {
-  color: red;
-  margin-bottom: 20px;
-}
-
-.subtitulo {
-  color: red;
-  margin-top: 40px;
-  margin-bottom: 20px;
 }
 
 .texto-intro {
@@ -100,56 +79,7 @@ h1, h2 {
   width: 100%;
   display: block;
   margin: auto;
-}
-
-.footer {
-  text-align: center;
-  background-color: #111;
-  color: white;
-  padding: 15px;
-  margin-top: 50px;
-}
-
-/* ---------- CALENDARIO ---------- */
-
-.circuitos {
-  width: 100%;
-  max-width: 600px;
-  display: block;
-  margin: 20px auto;
-}
-
-.calendario-lista {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.caja-carrera {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-bottom: 20px;
-}
-
-.mapa-seccion {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.formulario {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.formulario input {
-  display: block;
-  width: 250px;
-  margin: 10px auto;
-  padding: 5px;
-}
-
-.formulario button {
-  padding: 8px 20px;
-  cursor: pointer;
+  border-radius: 8px;
 }
 
 /* ---------- PARRILLA ---------- */
@@ -170,7 +100,43 @@ h1, h2 {
   border: 1px solid #ccc;
   padding: 12px;
   margin-bottom: 20px;
+  border-radius: 6px;
+  transition: transform 0.2s;
 }
+
+/* efecto simple al pasar el mouse */
+.caja-equipo:hover {
+  transform: scale(1.03);
+}
+
+/* ---------- CALENDARIO ---------- */
+
+.circuitos {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 6px;
+}
+
+.calendario-lista {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.caja-carrera {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.mapa-seccion {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* ---------- FORMULARIOS ---------- */
 
 .formulario {
   text-align: center;
@@ -181,10 +147,17 @@ h1, h2 {
   display: block;
   width: 250px;
   margin: 10px auto;
-  padding: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
 }
 
-.formulario button {
+.formulario button,
+.boton-enviar {
   padding: 8px 20px;
   cursor: pointer;
-}
+  background-color: #c50000;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  trans
