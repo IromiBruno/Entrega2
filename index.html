@@ -5,36 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Carburando F1</title>
 
-  <link rel="stylesheet" href="css/main.css">
-
   <!-- Bootstrap básico (solo para el menú) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Mi hoja de estilos -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
 <header class="header-principal">
-  <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="index.html">Carburando F1</a>
+  <!-- Navbar con modo oscuro para mejor contraste -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #433535;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Carburando F1</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li><a class="nav-link" href="pages/parrilla.html">Parrilla de temporada</a></li>
-        <li><a class="nav-link" href="pages/calendario.html">Calendario de carreras</a></li>
-      </ul>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li><a class="nav-link active" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="pages/parrilla.html">Parrilla de temporada</a></li>
+          <li><a class="nav-link" href="pages/calendario.html">Calendario de carreras</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
 
-
-<main class="principal">
-
+<main class="principal container">
   <h1 class="titulo-principal">¡Bienvenidos a Carburando!</h1>
 
   <img src="media/carburando-f1.Coderhouse.jpg" class="carburando" alt="Foto de F1">
@@ -43,25 +45,21 @@
     Página de F1 con galería, videos y todo el color de la categoría.
   </p>
 
-
   <h2 class="subtitulo">Galería destacada</h2>
-  <div class="row">
-    <div class="col-md-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5 mb-3">
       <img src="media/ferrari-f1.Coderhouse.jpg" class="foto-galeria" alt="Ferrari">
     </div>
-    <div class="col-md-5">
+    <div class="col-md-5 mb-3">
       <img src="media/mercedes-f1.Coderhouse.jpg" class="foto-galeria" alt="Mercedes">
     </div>
   </div>
-
 
   <h2 class="subtitulo">Maniobra en pits</h2>
   <video class="videoautos" controls>
     <source src="media/video-f1.coderhouse.mp4.mp4" type="video/mp4">
   </video>
-
 </main>
-
 
 <footer class="footer">
   <small>2025 · Carburando F1 · Todos los derechos reservados.</small>
@@ -69,3 +67,4 @@
 
 </body>
 </html>
+
